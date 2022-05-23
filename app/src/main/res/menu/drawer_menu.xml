@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_account"
+            android:title="My Profile" />
+        <item
+            android:visible="false"
+            android:id="@+id/nav_chats"
+            android:icon="@drawable/ic_chat"
+            android:title="Chats" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_message"
+            android:title="Contact Us" />
+        <item
+            android:id="@+id/nav_privacy"
+            android:icon="@drawable/ic_lock"
+            android:title="Privacy Policy" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_contact"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/ic_faq"
+            android:title="FAQs and Terms" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
+    </group>
+</menu>

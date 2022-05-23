@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/view_hexagon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/icon_hexagone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <ImageView
+            android:id="@+id/iv_categoryImage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="category image"
+            app:layout_constraintStart_toStartOf="@id/view_hexagon"
+            app:layout_constraintEnd_toEndOf="@id/view_hexagon"
+            app:layout_constraintTop_toTopOf="@id/view_hexagon"
+            app:layout_constraintBottom_toBottomOf="@id/view_hexagon"/>
+
+        <TextView
+            android:id="@+id/tv_categoryName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rokkitt"
+            android:hint="Category Name"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintTop_toTopOf="@id/view_hexagon"
+            app:layout_constraintStart_toEndOf="@id/view_hexagon"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/tv_subCategories"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rokkitt"
+            android:hint="Selected Services"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            app:layout_constraintStart_toStartOf="@id/tv_categoryName"
+            app:layout_constraintEnd_toEndOf="@id/tv_categoryName"
+            app:layout_constraintTop_toBottomOf="@id/tv_categoryName"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rokkitt"
+            android:hint="PKR 0"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintStart_toStartOf="@id/tv_categoryName"
+            app:layout_constraintTop_toBottomOf="@id/tv_subCategories"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:fontFamily="@font/rokkitt"
+            android:minHeight="0dp"
+            android:textColor="@color/red"
+            app:rippleColor="@color/red"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_price"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

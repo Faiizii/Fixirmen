@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="fragment"
+            type="com.app.fixirman.view.fragment.AppointmentFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:background="@color/bg_screen"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tabGravity="center"
+            app:tabPaddingStart="12dp"
+            app:tabPaddingEnd="12dp"
+            app:tabIndicator="@android:color/transparent"
+            app:tabSelectedTextColor="@color/colorAccent"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_upComing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming"/>
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_past"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Past"/>
+        </com.google.android.material.tabs.TabLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_requests"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            tools:listitem="@layout/vh_appointment"
+            android:layout_marginTop="4dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/tabs"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_noDataFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Appointment"
+            android:fontFamily="@font/rokkitt"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

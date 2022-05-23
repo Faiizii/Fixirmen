@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.app.fixirman.model.request.RequestDetail" />
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/view_hexagon"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:cardCornerRadius="35dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+                <ImageView
+                    android:id="@+id/iv_categoryImage"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tv_requestCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rokkitt"
+                android:hint="No name"
+                android:text="@{model.categoryName}"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                app:layout_constraintEnd_toStartOf="@id/tv_requestStatus"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/view_hexagon"/>
+            <TextView
+                android:id="@+id/tv_requestStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rokkitt"
+                android:hint="Searching..."
+                android:text="@{model.status}"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_initialCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rokkitt"
+                android:hint="Rs. 0"
+                android:text="@{`Rs. `+model.initialCost}"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                app:layout_constraintTop_toBottomOf="@id/tv_requestCategory"
+                app:layout_constraintStart_toStartOf="@id/tv_requestCategory"/>
+            <TextView
+                android:id="@+id/tv_requestAddressType"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rokkitt"
+                android:hint="Address"
+                android:drawablePadding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:layout_constraintTop_toBottomOf="@id/view_hexagon"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/tv_requestAddress"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rokkitt"
+                android:hint="No address"
+                android:text="@{model.address}"
+                style="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintTop_toBottomOf="@id/tv_requestAddressType"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/tv_paymentType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rokkitt"
+                android:text="Cash on Service"
+                android:drawableStart="@drawable/cash_payment"
+                android:gravity="center_vertical"
+                android:layout_marginTop="32dp"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                app:layout_constraintTop_toBottomOf="@id/tv_requestAddress"
+                app:layout_constraintStart_toStartOf="@id/tv_requestAddress"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                app:fabSize="mini"
+                android:rotation="180"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

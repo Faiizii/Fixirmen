@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_appointments"
+        android:icon="@drawable/ic_appointment"
+        android:title="Appointments" />
+    <item
+        android:id="@+id/navigation_categories"
+        android:icon="@drawable/ic_dashboard"
+        android:title="Categories" />
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_notification"
+        android:title="Notifications" />
+
+</menu>

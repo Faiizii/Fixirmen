@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+        <TextView
+            android:id="@+id/tv_timeSlot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="00:00 aa"
+            android:fontFamily="@font/rokkitt"
+            android:padding="16dp"
+            android:textAlignment="center"
+            style="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

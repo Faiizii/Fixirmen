@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Fixirman</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="sync_account_type">faiizii.sync.com</string>
+    <string name="content_authority">com.faiizii.sync.app</string>
+    <string name="send_code">Send Code</string>
+    <string name="verify">Verify</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="about_us">this is testing about us</string>
+
+    <string name="API_key">key</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="back_button">Back Button</string>
+    <string name="req_num">REQ# 0</string>
+    <string name="no_name">No name</string>
+    <string name="searching">Searching...</string>
+    <string name="rs_hint">Rs. 0</string>
+    <string name="address">Address</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="searching_worker">Searching Worker...</string>
+    <string name="worker_name">Worker Name</string>
+    <string name="no_description">No Description</string>
+    <string name="call">Call</string>
+    <string name="message">Message</string>
+    <string name="request_details">Request Details</string>
+    <string name="service_requested">Service Requested</string>
+    <string name="standard">Standard</string>
+    <string name="created_on">Created On</string>
+    <string name="date_time">date/time</string>
+</resources>

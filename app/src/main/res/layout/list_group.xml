@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="12dp"
+    android:layout_marginRight="12dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+    <TextView
+        android:id="@+id/lblListHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="?android:attr/expandableListPreferredItemPaddingLeft"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:fontFamily="@font/rokkitt"/>
+
+</LinearLayout>
